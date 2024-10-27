@@ -13,6 +13,7 @@
     "lint:style": "stylelint \"**/*.{css,scss,tsx,vue}\" --fix"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.5.5",
     "nuxt": "^3.13.2",
     "vue": "latest",
     "vue-router": "latest"
