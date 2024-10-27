@@ -10,6 +10,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint:es": "eslint \"**/*.{js,mjs,cjs,ts,tsx,vue}\" --fix",
+    "lint:style": "stylelint \"**/*.{css,scss,tsx,vue}\" --fix"
   },
   "dependencies": {
     "nuxt": "^3.13.2",
@@ -18,6 +19,12 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.8.0",
+    "stylelint": "^16.10.0",
+    "stylelint-config-sass-guidelines": "^12.1.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-order": "^6.0.4",
     "typescript": "^5.6.3"
   }
 }
