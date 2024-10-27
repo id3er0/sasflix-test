@@ -1,18 +1,17 @@
 {
-  "name": "nuxt-app",
+  "name": "sasflix-test",
   "private": true,
+  "author": "ID 0 <id0@posteo.net> (https://id0.it)",
   "type": "module",
+  "packageManager": "pnpm@9.12.2",
+  "engines": {
+    "node": ">=20.18.0",
+    "npm": "use-pnpm"
+  },
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "nuxt": "^3.13.2",
-    "vue": "latest",
-    "vue-router": "latest"
-  },
-  "packageManager": "pnpm@9.12.0"
+    "preinstall": "npx only-allow pnpm",
+    "front": "pnpm --filter=@sasflix-test/nuxt-blog",
+    "front:dev": "pnpm run front dev",
+    "dev": "pnpm run front:dev"
+  }
 }

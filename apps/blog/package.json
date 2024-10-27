@@ -1,0 +1,18 @@
+{
+  "name": "@sasflix-test/nuxt-blog",
+  "private": true,
+  "author": "ID 0 <id0@posteo.net> (https://id0.it)",
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.13.2",
+    "vue": "latest",
+    "vue-router": "latest"
+  }
+}
