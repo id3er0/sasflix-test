@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.8.0",
+    "@nuxt/eslint": "^0.6.0",
     "sass": "^1.80.4",
     "stylelint": "^16.10.0",
     "stylelint-config-sass-guidelines": "^12.1.0",
