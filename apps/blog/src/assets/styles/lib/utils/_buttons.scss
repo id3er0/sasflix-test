@@ -1,0 +1,25 @@
+@mixin cursor-pointer {
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+@mixin reset-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  outline: none;
+
+  @at-root button#{&} {
+    @include cursor-pointer;
+  }
+
+  @at-root a#{&} {
+    @include cursor-pointer;
+  }
+
+  @at-root label#{&} {
+    @include cursor-pointer;
+  }
+}

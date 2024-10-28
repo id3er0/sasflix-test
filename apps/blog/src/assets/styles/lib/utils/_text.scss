@@ -1,0 +1,9 @@
+@mixin text-rows-dots($n: 2) {
+  /* stylelint-disable-next-line value-no-vendor-prefix */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: clip;
+  word-break: break-word;
+  -webkit-line-clamp: $n;
+  -webkit-box-orient: vertical;
+}

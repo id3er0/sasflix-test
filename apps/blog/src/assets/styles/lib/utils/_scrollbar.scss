@@ -1,0 +1,37 @@
+@use '../functions/px-rem';
+
+@mixin custom-scrollbar($hide: false) {
+  --scrollbar-size: #{px-rem(6)};
+  --scrollbar-thumb-background-color: #939393;
+  --scrollbar-thumb-background-color-visible: #939393;
+  --scrollbar-background-color: transparent;
+
+  transition: all 0.15s;
+  //noinspection CssUnknownProperty
+  scrollbar-color: var(--scrollbar-thumb-background-color) var(--scrollbar-background-color);
+  //noinspection CssUnknownProperty
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: var(--scrollbar-size);
+    height: var(--scrollbar-size);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--scrollbar-background-color);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: px-rem(3) solid var(--scrollbar-background-color);
+    border-radius: px-rem(6);
+    background-color: var(--scrollbar-thumb-background-color);
+  }
+
+  @if $hide {
+    --scrollbar-thumb-background-color: transparent;
+
+    &:hover {
+      --scrollbar-thumb-background-color: var(--scrollbar-thumb-background-color-visible);
+    }
+  }
+}

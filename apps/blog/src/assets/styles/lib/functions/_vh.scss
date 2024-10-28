@@ -1,0 +1,5 @@
+// Convert `[N]vh` to `calc(var(--vh, 1vh) * [N])`.
+// https://github.com/Faisal-Manzer/postcss-viewport-height-correction
+@function vh($size) {
+  @return calc(var(--vh, 1vh) * #{$size});
+}

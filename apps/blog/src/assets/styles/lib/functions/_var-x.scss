@@ -1,0 +1,4 @@
+// Convert a px based font-size to rem.
+@function var-x($var, $k: 1) {
+  @return calc(var(#{$var}) * #{$k});
+}

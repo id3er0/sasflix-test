@@ -1,0 +1,8 @@
+@use '../functions/px-rem' as *;
+@use '../utils/media-queries' as *;
+
+@mixin text-body {
+  font-size: px-rem(16);
+  font-weight: normal;
+  line-height: 1.5em;
+}
