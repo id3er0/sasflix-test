@@ -4,11 +4,11 @@
   "author": "ID 0 <id0@posteo.net> (https://id0.it)",
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "build": "NUXT_TELEMETRY_DISABLED=1 nuxt build",
+    "dev": "NUXT_TELEMETRY_DISABLED=1 nuxt dev",
+    "generate": "NUXT_TELEMETRY_DISABLED=1 nuxt generate",
+    "preview": "NUXT_TELEMETRY_DISABLED=1 nuxt preview",
+    "postinstall": "NUXT_TELEMETRY_DISABLED=1 nuxt prepare",
     "lint:es": "eslint \"**/*.{js,mjs,cjs,ts,tsx,vue}\" --fix",
     "lint:style": "stylelint \"**/*.{css,scss,tsx,vue}\" --fix"
   },
