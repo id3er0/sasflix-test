@@ -8,6 +8,8 @@ This project is a demo that utilizes the following technologies:
 - TypeScript
 - ESLint
 - Stylelint
+- CSS variables
+- CSS layers
 
 ### Starting the Nuxt Application
 

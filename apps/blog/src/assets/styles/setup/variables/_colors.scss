@@ -1,0 +1,9 @@
+@layer base {
+  :root,
+  [data-theme='default'] {
+    --color-text-primary: #000;
+    --color-text-inverted: #fff;
+    --color-background-primary: #fff;
+    --color-background-inverted: #000;
+  }
+}

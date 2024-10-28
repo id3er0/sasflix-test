@@ -1,0 +1,14 @@
+// Import SASS utils.
+@use 'sass:meta';
+
+// Layers order
+@use 'layers';
+
+// Import base styles and variables.
+@use 'variables';
+@use 'main';
+
+// Import normalize.css.
+@layer normalize {
+  @include meta.load-css("normalize.css");
+}

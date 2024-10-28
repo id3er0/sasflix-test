@@ -1,0 +1,8 @@
+@layer base {
+  html {
+    font-size: 16px;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent; // Fix for mobile while taping
+  }
+}
