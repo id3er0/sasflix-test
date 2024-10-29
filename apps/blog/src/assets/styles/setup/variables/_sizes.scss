@@ -1,0 +1,10 @@
+@use "../../lib/functions/px-rem" as *;
+@use "../../lib/functions/var-x" as *;
+
+@layer base {
+  :root,
+  [data-theme='default'] {
+    --spacing-base: #{px-rem(4)};
+    --margin-base: #{var-x(--spacing-base, 4)};
+  }
+}
