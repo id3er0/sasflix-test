@@ -9,6 +9,7 @@ const props = defineProps<{
 
 <template>
   <div :class="$style.footer">
+    <PostReactions :post="props.post" />
     <PostCommentsButton v-if="!props.isPage" :post="props.post" />
     <Date :id="props.post.id" />
     <PostTags :post="props.post" />
