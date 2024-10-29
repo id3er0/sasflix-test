@@ -1,9 +1,19 @@
+@use 'sass:color';
+
 @layer base {
   :root,
   [data-theme='default'] {
-    --color-text-primary: #000;
-    --color-text-inverted: #fff;
-    --color-background-primary: #fff;
-    --color-background-inverted: #000;
+    --color-text: #05090E;
+    --color-text-accent: #FF6B00;
+    --color-text-inverted: #{rgba(#fff, 0.95)};
+    --color-background: #fff;
+    --color-border: var(--color-text);
+    --color-border-accent: var(--color-text-accent);
+    --color-link: var(--color-text-accent);
+    --color-link-hover: #{color.adjust(#FF6B00, $lightness: 15%)};
+    --color-button-text: #040405;
+    --color-button-background: #{rgba(#040405, 0.04)};
+    --color-action: #FF3B30;
+    --color-tag-background: #{rgba(#787880, 0.08)};
   }
 }
