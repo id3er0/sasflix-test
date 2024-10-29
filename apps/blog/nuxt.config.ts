@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   srcDir: 'src/',
-  modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@pinia/nuxt', 'dayjs-nuxt'],
+  modules: ['@nuxt/eslint', '@nuxtjs/i18n', 'dayjs-nuxt', '@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt'],
   eslint: {
     config: {
       standalone: false,
