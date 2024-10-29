@@ -1,0 +1,27 @@
+@use "./typography" as *;
+
+@mixin action-link {
+  @include text-small;
+
+  --color: var(--color-link);
+  --color-hover: var(--color-link-hover);
+
+  position: relative;
+  color: var(--color-link);
+  text-decoration: none;
+  transition: all 0.15s linear;
+
+  &:hover {
+    color: var(--color-hover);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    border: 0.5px solid var(--color-hover);
+    opacity: 0.3;
+  }
+}

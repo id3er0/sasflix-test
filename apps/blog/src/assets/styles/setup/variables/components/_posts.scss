@@ -1,0 +1,10 @@
+@use "../../../lib/functions/px-rem" as *;
+
+@layer base {
+  :root,
+  [data-theme='default'] {
+    --posts-max-width: #{px-rem(676)};
+    --posts-gap: calc(var(--spacing-base) * 8);
+    --post-gap: calc(var(--spacing-base) * 4);
+  }
+}
