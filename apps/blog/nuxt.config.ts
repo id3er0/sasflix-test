@@ -10,6 +10,12 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
+  runtimeConfig: {
+    public: {
+      // NUXT_PUBLIC_API_HOST
+      apiHost: 'https://dummyjson.com',
+    },
+  },
   dayjs: {
     locales: ['en'],
     plugins: ['relativeTime', 'utc', 'timezone'],
