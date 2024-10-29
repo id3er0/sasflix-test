@@ -5,6 +5,6 @@ import '~/assets/styles/setup/index.scss';
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <NuxtPage />
   </div>
 </template>
