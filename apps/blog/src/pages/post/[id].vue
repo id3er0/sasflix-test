@@ -21,6 +21,8 @@ callOnce(execute);
     </Title>
 
     <Post is-page :post="post" />
+
+    <PostComments :post="post" />
   </div>
 </template>
 
