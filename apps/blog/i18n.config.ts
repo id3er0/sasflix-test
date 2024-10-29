@@ -3,7 +3,13 @@ export default defineI18nConfig(() => ({
   locale: 'en',
   messages: {
     en: {
-      today: 'Today',
+      delete: 'Delete',
+      like: 'Like',
+      dislike: 'Trash',
+      open_comments: 'Open comments',
+      comment: ({ plural }: { plural: (args: string[]) => string }) => plural(['comment', 'comments']),
+      deleted_comment: 'This comment has been deleted.',
+      revert: 'Return',
     },
   },
 }));
