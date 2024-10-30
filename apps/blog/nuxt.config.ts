@@ -5,11 +5,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   experimental: {
+    viewTransition: true,
     componentIslands: {
       selectiveClient: 'deep',
     },
   },
-  modules: ['@nuxt/eslint', '@nuxtjs/i18n', 'dayjs-nuxt', '@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@vueuse/nuxt'],
   vite: {
     css: {
       preprocessorOptions: {
@@ -19,6 +19,14 @@ export default defineNuxtConfig({
       },
     },
   },
+  modules: [
+    '@nuxt/eslint',
+    '@nuxtjs/i18n',
+    'dayjs-nuxt',
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
+    '@vueuse/nuxt',
+  ],
   typescript: {
     typeCheck: true,
   },
