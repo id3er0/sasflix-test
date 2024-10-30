@@ -1,6 +1,6 @@
 export default {
   defaultSeverity: 'warning',
-  extends: ['stylelint-config-standard'],
+  extends: ['stylelint-config-standard', 'stylelint-prettier/recommended'],
   overrides: [
     {
       files: ['*.scss', '**/*.scss'],
