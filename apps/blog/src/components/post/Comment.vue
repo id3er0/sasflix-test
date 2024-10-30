@@ -71,10 +71,8 @@ const deleteComment = useTimeoutFn(() => {
 .user {
   @include text-body;
 
-  & {
-    font-weight: 600;
-    line-height: 1;
-  }
+  font-weight: 600;
+  line-height: 1;
 }
 
 .body {
@@ -84,11 +82,9 @@ const deleteComment = useTimeoutFn(() => {
 .deleteWarning {
   @include text-body;
 
-  & {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var-x(--spacing-base, 2);
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: var-x(--spacing-base, 2);
 }
 
 .deleteWarningAction {
