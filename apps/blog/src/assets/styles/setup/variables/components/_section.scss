@@ -3,6 +3,7 @@
 @layer base {
   :root,
   [data-theme='default'] {
-    --post-gap: calc(var(--spacing-base) * 4);
+    --section-max-width: #{px-rem(676)};
+    --section-gap: calc(var(--spacing-base) * 8);
   }
 }

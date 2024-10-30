@@ -21,6 +21,10 @@ const { t } = useI18n();
   <div v-if="status === 'pending'">
     Loading...
   </div>
+  <SkeletonPost
+    v-if="status === 'pending' && Array.isArray(clearedComments) && clearedComments.length === 0"
+    variant="narrow"
+  />
   <div v-else :class="$style.comments">
 
     <PostComment v-for="comment in clearedComments" :key="comment.id" :comment="comment" />

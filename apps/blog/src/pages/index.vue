@@ -2,7 +2,7 @@
 const postsStore = useFetchPostsStore();
 const { data } = storeToRefs(postsStore);
 
-const { execute, error } = useFetchPosts();
+const { execute, status, error } = useFetchPosts();
 callOnce(execute);
 
 useHead({
@@ -11,11 +11,13 @@ useHead({
 </script>
 
 <template>
-  <div v-if="error" :class="$style.posts">
+  <SkeletonPost v-if="status === 'pending' && data.total === 0" :posts="5" :rows="5" :class="$style.component" />
+
+  <div v-else-if="error" :class="$style.component">
     {{ error }}
   </div>
 
-  <div v-else :class="$style.posts">
+  <div v-else :class="$style.component">
     <Post v-for="post in data.posts" :key="post.id" :post="post" />
   </div>
 </template>
@@ -23,12 +25,7 @@ useHead({
 <style lang="scss" module>
 @use '~/assets/styles/lib' as *;
 
-.posts {
-  display: flex;
-  flex-direction: column;
-  gap: var(--posts-gap);
-  max-width: var(--posts-max-width);
-  margin: 0 auto;
-  padding: var(--margin-base);
+.component {
+  @include section;
 }
 </style>
