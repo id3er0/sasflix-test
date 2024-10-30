@@ -1,3 +1,4 @@
+// noinspection JSUnusedGlobalSymbols
 export default {
   defaultSeverity: 'warning',
   extends: ['stylelint-config-standard', 'stylelint-prettier/recommended'],
