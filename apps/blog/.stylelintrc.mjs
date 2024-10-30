@@ -266,5 +266,6 @@ export default {
         ignoreAtRules: ['each', 'media', 'supports', 'include'],
       },
     ],
+    'custom-property-no-missing-var-function': null,
   },
 };
