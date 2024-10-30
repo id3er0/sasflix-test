@@ -3,6 +3,7 @@
   "private": true,
   "author": "ID 0 <id0@posteo.net> (https://id0.it)",
   "type": "module",
+  "packageManager": "pnpm@9.12.3",
   "scripts": {
     "build": "NUXT_TELEMETRY_DISABLED=1 nuxt build",
     "dev": "NUXT_TELEMETRY_DISABLED=1 nuxt dev",
