@@ -10,6 +10,15 @@ export default defineNuxtConfig({
     },
   },
   modules: ['@nuxt/eslint', '@nuxtjs/i18n', 'dayjs-nuxt', '@pinia/nuxt', 'pinia-plugin-persistedstate/nuxt', '@vueuse/nuxt'],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
+      },
+    },
+  },
   typescript: {
     typeCheck: true,
   },
