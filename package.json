@@ -12,6 +12,9 @@
     "preinstall": "npx only-allow pnpm",
     "front": "pnpm --filter=@sasflix-test/nuxt-blog",
     "front:dev": "pnpm run front dev",
-    "dev": "pnpm run front:dev"
+    "dev": "pnpm run front:dev",
+    "build": "pnpm run front build",
+    "preview": "pnpm run front preview",
+    "start": "pnpm run front start"
   }
 }
