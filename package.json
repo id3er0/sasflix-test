@@ -15,6 +15,9 @@
     "dev": "pnpm run front:dev",
     "build": "pnpm run front build",
     "preview": "pnpm run front preview",
-    "start": "pnpm run front start"
+    "start": "pnpm run front start",
+    "docker:build": "docker build --no-cache --progress=plain -f ./Dockerfile -t sasflix-test .",
+    "docker:run": "docker run --env-file ./apps/blog/.env -p 3000:3000 sasflix-test"
   }
 }
+

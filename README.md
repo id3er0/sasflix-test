@@ -11,6 +11,12 @@ This project is a demo that utilizes the following technologies:
 - CSS variables
 - CSS layers
 
+### Starting application with the Docker Compose
+
+```bash
+docker compose up -d
+```
+
 ### Starting the Nuxt Application
 
 To run the frontend Nuxt application, follow these steps:

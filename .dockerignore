@@ -1,0 +1,17 @@
+.git
+.idea
+.deploy
+!.deploy/etc/nginx
+**/.nuxt
+**/.next
+**/.output
+**/coverage
+**/build
+**/dist
+**/node_modules
+**/storybook-static
+gen
+opt
+.env.example
+docker
+README.md

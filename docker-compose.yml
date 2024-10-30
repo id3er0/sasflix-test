@@ -1,0 +1,15 @@
+services:
+  blog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apps/blog:/app
+
+    # Set environment variables directly in the docker-compose file
+    environment:
+      NODE_ENV: production
+      NUXT_PUBLIC_API_HOST: ${NUXT_PUBLIC_API_HOST:-https://dummyjson.com}
+      NEXT_TELEMETRY_DISABLED: ${NEXT_TELEMETRY_DISABLED:-1}
