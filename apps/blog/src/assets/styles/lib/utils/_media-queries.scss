@@ -1,7 +1,7 @@
 @use '../functions/px-em' as *;
 
 $mqs: (
-  //name - breakpoint
+  // name - breakpoint
   'extra-small': 440,
   'small': 768,
   'medium': 1024,
@@ -19,21 +19,25 @@ $mqs: (
   @each $name, $bp in $mqs {
     $max: calc(#{px-em($bp)} - #{px-em(1)});
     $min: px-em($bp);
-    //@debug $size == "-#{$name}";
+
+    // @debug $size == "-#{$name}";
     @if $size == '-#{$name}' {
       @media (max-width: $max) {
         @content;
       }
     }
+
     @if $size == '+#{$name}' {
       @media (min-width: $min) {
         @content;
       }
     }
+
     @if $size == '#{$name}' {
       @each $name, $bp in $mqs {
         @if $size2 == '#{$name}' {
           $max: calc(#{px-em($bp)} - #{px-em(1)});
+
           @media (min-width: $min) and (max-width: $max) {
             @content;
           }

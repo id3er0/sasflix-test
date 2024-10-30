@@ -62,20 +62,18 @@ const dislikes = computed(() => (props.post?.reactions?.dislikes || 0) + (reacti
   @include reset-button;
   @include text-small;
 
-  & {
-    --color: var(--color-button-text);
-    --height: #{px-rem(27)};
-    --count-opacity: 0.3;
+  --color: var(--color-button-text);
+  --height: #{px-rem(27)};
+  --count-opacity: 0.3;
 
-    display: flex;
-    gap: var(--spacing-base);
-    align-items: center;
-    height: var(--height);
-    padding: var-x(--spacing-base, 2);
-    background-color: var(--color-button-background);
-    color: var(--color);
-    transition: all 0.15s linear;
-  }
+  display: flex;
+  gap: var(--spacing-base);
+  align-items: center;
+  height: var(--height);
+  padding: var-x(--spacing-base, 2);
+  background-color: var(--color-button-background);
+  color: var(--color);
+  transition: all 0.15s linear;
 
   &:first-child {
     padding-right: var-x(--spacing-base, 3);

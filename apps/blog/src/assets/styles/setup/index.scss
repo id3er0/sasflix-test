@@ -11,5 +11,5 @@
 
 // Import normalize.css.
 @layer normalize {
-  @include meta.load-css("normalize.css");
+  @include meta.load-css('normalize.css');
 }

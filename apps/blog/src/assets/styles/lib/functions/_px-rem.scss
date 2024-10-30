@@ -2,6 +2,6 @@
 @function px-rem($size) {
   $rem-size: $size * 0.0625;
 
-  //Default font size on html element is 100%, equivalent to 16px;
+  // Default font size on html element is 100%, equivalent to 16px;
   @return #{$rem-size}rem;
 }

@@ -109,9 +109,7 @@ const deleteComment = useTimeoutFn(() => {
   @include reset-button;
   @include action-link;
 
-  & {
-    --color: var(--color-action);
-    --color-hover: var(--color-action);
-  }
+  --color: var(--color-action);
+  --color-hover: var(--color-action);
 }
 </style>
