@@ -7,6 +7,7 @@ export const useDeleteCommentsStore = defineStore('delete-comments', {
   state: (): DeleteCommentsState => ({
     deletedComments: [],
   }),
+  persist: true,
   getters: {
     hasDeletedCommentsForPost: state => (postId: Post['id']) => {
       const fetchCommentsStore = useFetchCommentsStore();
