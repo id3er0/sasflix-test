@@ -1,0 +1,12 @@
+@layer base {
+  html {
+    overflow-y: scroll;
+  }
+
+  @supports (scrollbar-gutter: stable) {
+    html {
+      overflow-y: auto;
+      scrollbar-gutter: stable;
+    }
+  }
+}
