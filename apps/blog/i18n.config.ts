@@ -10,6 +10,7 @@ export default defineI18nConfig(() => ({
       comment: ({ plural }: { plural: (args: string[]) => string }) => plural(['comment', 'comments']),
       deleted_comment: 'This comment has been deleted.',
       revert: 'Return',
+      revert_comments: 'Revert deleted comments',
     },
   },
 }));

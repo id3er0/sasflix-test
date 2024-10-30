@@ -15,21 +15,45 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <h3 :class="$style.heading">
-      {{ clearedComments.length }} {{ t('comment', clearedComments.length) }}
-    </h3>
-  <div v-if="status === 'pending'">
-    Loading...
-  </div>
   <SkeletonPost
     v-if="status === 'pending' && Array.isArray(clearedComments) && clearedComments.length === 0"
     variant="narrow"
   />
-  <div v-else :class="$style.comments">
 
-    <PostComment v-for="comment in clearedComments" :key="comment.id" :comment="comment" />
+  <div v-else :class="$style.comments">
+    <div :class="$style.heading">
+      <h3 :class="$style.title">
+        {{ clearedComments.length }} {{ t('comment', clearedComments.length) }}
+      </h3>
+      <TransitionGroup name="list">
+        <PostRevertDeletedComments key="revert" :post-id="props.post.id" />
+      </TransitionGroup>
+    </div>
+
+    <TransitionGroup name="list">
+      <PostComment
+        v-for="comment in clearedComments"
+        :key="comment.id"
+        :comment="comment"
+      />
+    </TransitionGroup>
   </div>
 </template>
+
+<style lang="scss" scoped>
+@use '~/assets/styles/lib' as *;
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(20%);
+}
+</style>
 
 <style lang="scss" module>
 @use '~/assets/styles/lib' as *;
@@ -41,6 +65,12 @@ const { t } = useI18n();
 }
 
 .heading {
+  display: flex;
+  gap: var-x(--spacing-base, 4);
+  align-items: baseline;
+}
+
+.title {
   @include text-heading;
 }
 </style>
