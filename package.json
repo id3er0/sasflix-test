@@ -1,5 +1,6 @@
 {
   "name": "sasflix-test",
+  "version": "1.0.0",
   "private": true,
   "author": "ID 0 <id0@posteo.net> (https://id0.it)",
   "type": "module",
